@@ -13,7 +13,7 @@ and when you complete your changes
 ```bash
 git add <certain files or . to choose all>
 git commit -m "your message"
-git push
+git push https://github.com/Hacker035Tz/ElMaram-Website main
 ```
 
 Good Luck!
