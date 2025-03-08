@@ -1,9 +1,59 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: #e0e0e0;
+:root { /* variables */
+
+    /* colors */
+    --nav-bar-c: #fff;
+    --bg-c: #e0e0e0;
+
+    /* dimensions */
+    --nav-height: min(100px, 15vh);
+    --font-size: 13px;
+
+
+    --call-us-w: min(25vw, 180px);
+}
+
+body {
+    background-color: var(--bg-c);
+}
+
+/*********   nav bar    ********/
+
+
+.nav {
+    width: 100vw;
+    background-color: var(--nav-bar-c);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: var(--font-size);
+}
+
+.nav>.menu>ul>li {
+    display: inline;
+    padding: 10px;
+}
+
+.nav>.menu>ul>li>a {
+    color: #000;
+    text-decoration: none;
+}
+.nav>.logo>img {
+    width: var(--nav-height);
+}
+.nav>.phone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: var(--call-us-w);
+}
+
+.nav>.phone>img {
+    width: calc(var(--font-size)*2);
+    padding-right: 5px;
 }
