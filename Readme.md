@@ -7,7 +7,7 @@
 Go to your terminal and type :
 
 ```bash
-git clone https://github.com/Hacker035Tz/ElMaram-Website/tree/main <your directory>
+git clone https://github.com/Hacker035Tz/ElMaram-Website/tree/master <your directory>
 ```
 You might enter your username and your PAT token, to do that see this video :
 https://www.youtube.com/watch?v=iLrywUfs7yU
