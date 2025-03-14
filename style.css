@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-:root { /* variables */
+:root {
+    /* variables */
 
     /* colors */
     --nav-bar-c: #fff;
@@ -26,7 +27,6 @@ body {
 
 
 .nav {
-    width: 100vw;
     background-color: var(--nav-bar-c);
     display: flex;
     justify-content: space-around;
@@ -43,9 +43,11 @@ body {
     color: #000;
     text-decoration: none;
 }
+
 .nav>.logo>img {
     width: var(--nav-height);
 }
+
 .nav>.phone {
     display: flex;
     align-items: center;
@@ -56,4 +58,99 @@ body {
 .nav>.phone>img {
     width: calc(var(--font-size)*2);
     padding-right: 5px;
+}
+
+/****** welcome page ******/
+.flex {
+    display: flex;
+}
+
+header {
+    background-image: url(assets/images/background.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 460px;
+}
+
+.vl {
+    margin: 10px;
+    border-left: 3px solid;
+    height: auto;
+}
+
+header .title {
+    display: flex;
+    color: white;
+}
+
+header h1 {
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .title {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(146, 19, 19);
+}
+
+.left-section {
+    margin-block-start: auto;
+    margin-block-end: auto;
+}
+
+.left-section img {
+    width: 100%;
+}
+
+.right-section {
+    max-width: 60%;
+    flex-grow: 1;
+}
+
+main .title h1 {
+    margin: 10px;
+}
+
+main .title .box {
+    background-color: rgb(146, 19, 19);
+    color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.box-group {
+    margin-inline-end: 23px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-content: space-between;
+    margin-inline-start: 60px;
+}
+
+.description {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-inline-start: 13px;
+}
+
+.button {
+    margin: 10px;
+    padding: 5px;
+    border: 0em;
+}
+
+.one {
+    background-color: red;
+    color: white;
+}
+
+.two {
+    background-color: rgb(112, 88, 88);
+    color: rgb(192, 187, 187);
 }
