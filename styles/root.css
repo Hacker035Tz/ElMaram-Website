@@ -30,8 +30,8 @@
 
 
 	/* urls */
-	--hero-background: url("/assets/images/hero_bg.jpeg");
-	--hero-texture: url("/assets/images/hero_texture.jpeg");
+	--hero-background: url("../assets/images/hero_bg.jpeg");
+	--hero-texture: url("../assets/images/hero_texture.jpeg");
 }
 
 body {
