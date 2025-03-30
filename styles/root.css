@@ -1,0 +1,39 @@
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+
+	/* colors */
+	--nav-bar-c: #fff; /* c stands for color */
+	--bg-c: #e0e0e0;
+
+	/* dimensions */
+	--nav-height: min(100px, 15vh);
+
+	/* font sizes :
+		r: regular,
+		b: big,
+	*/
+
+	/*
+	--r-font-size: 13px;
+	--b-font-size: 40px;
+	*/
+
+
+	/* special dimentions for the website to be responsive */
+	--call-us-width: min(25vw, 180px);
+
+
+	/* urls */
+	--hero-background: url("/assets/images/hero_bg.jpeg");
+	--hero-texture: url("/assets/images/hero_texture.jpeg");
+}
+
+body {
+	background-color: var(--bg-c);
+}

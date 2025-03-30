@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="styles/root.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/hero.css" />
+    <link rel="stylesheet" href="styles/about_us.css" />
+
     <link rel="icon" type="image/png" href="assets/images/logo_cercle.png" />
+
     <title>ElMaram</title>
+
   </head>
 
   <body>
-    <!--navigation bar-->
-    <section class="nav">
+
+    <!--------------------------------- navigation bar ---------------------------------->
+
+    <section class="nav" id="nav">
       <div class="logo">
         <img src="assets/images/logo.jpg" alt="logo" />
       </div>
@@ -30,44 +40,57 @@
         </div>
       </div>
     </section>
-    <!-- header -->
-    <header>
-      <div class="title">
-        <div class="vl"></div>
-        <div>
-          <h1>
-            Welcome To <br />
-            El Maram Center
-          </h1>
-        </div>
-      </div>
-      <div>
-        <p>
-          Step into El Maram Center , a place where <br />
-          knowledge empowers and dreams take flight. Join <br />
-          us on journey of growth, success, and endless <br />
-          possibilities
-        </p>
-      </div>
-      <div>
-        <a href="#" alt="Services"
-          ><button class="button one" type="button">Services</button></a
-        >
 
-        <a href="#" alt="about the center"
-          ><button class="button two">About the center</button></a
-        >
-      </div>
-      <div>
-        <p>El MARAM</p>
-        <p>
-          CENTER FOR <br />
-          TRAINING & CONSULTING
-        </p>
-      </div>
-    </header>
-    <!-- about us-->
-    <main>
+    <!---------------------------------- hero section ----------------------------------->
+
+    <section class="hero">
+        <!--the hero is made of a right and a left side-->
+
+        <!--left-->
+        <div class="left-side">
+            <div class="title">
+                <!--replaced vl with pseudo element-->
+                <div>
+                <h1>
+                    Welcome To <br />
+                    El Maram Center
+                </h1>
+                </div>
+            </div>
+            <div>
+                <p>
+                Step into El Maram Center , a place where <br />
+                knowledge empowers and dreams take flight. Join <br />
+                us on journey of growth, success, and endless <br />
+                possibilities
+                </p>
+            </div>
+            <div>
+                <div class="hero_buttons">
+                    <a href="#" class="services_button">Services</a>
+                    <a href="#" class="about_the_center_button">About the center</a>
+                </div>
+                </a>
+            </div>
+        </div>
+
+        <!--right-->
+        <div class="right-side">
+            <section class="right-side-content">
+                <p>El MARAM</p>
+                <p>
+                CENTER FOR <br />
+                TRAINING & CONSULTING
+                </p>
+            </section>
+        </div>
+
+
+    </section>
+
+    <!--------------------------------- about us section --------------------------->
+
+    <section class="about">
       <!-- the big div that contains the about us section-->
       <div class="left-section">
         <img src="assets/images/left side image.png" />
@@ -103,7 +126,7 @@
           </p>
         </div>
       </div>
-    </main>
+    </section>
 
     <script src="script.js"></script>
   </body>
