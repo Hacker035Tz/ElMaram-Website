@@ -1,46 +1,47 @@
-
 /**** navbar properties ****/
 
 .nav {
-	background-color: var(--nav-bar-c);
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	font-size: var(--font-size);
-	position: sticky;
-	z-index: 1000;
-	top: 0;
+  background-color: var(--nav-bar-c);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
 }
 
 /**** logo ****/
 
 .nav > .logo > img {
-	width: var(--nav-height);
+  width: var(--nav-height);
 }
-
 
 /**** menu ****/
 
 .nav > .menu > ul > li {
-	display: inline;
-	padding: 10px;
+  display: inline;
+  padding: 10px;
 }
 
 .nav > .menu > ul > li > a {
-	color: #000;
-	text-decoration: none;
+  font-family: var(--menu-font);
+  font-size: var(--text-font-size);
+  color: var(--light-gray);
+  text-decoration: none;
 }
 
 /**** phone number section ****/
 
 .nav > .phone {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	min-width: var(--call-us-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
+.phone_txt > * {
+  font-family: var(--cursive-ish-font);
+  font-size: var(--text-font-size);
+}
 .nav > .phone > img {
-	width: calc(var(--font-size) * 2);
-	padding-right: 5px;
+  padding-right: 20px;
 }

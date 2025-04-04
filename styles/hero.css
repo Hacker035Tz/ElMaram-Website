@@ -1,78 +1,185 @@
-.hero {
-	height: 100vh; /* full width */
-	width: 100vw; /* full height */
-	position: relative;
+/**** setup ****/
+
+:root {
+  --right-side-font-size: 1.5em;
+
+  --right-side-line-height: 1.5em;
 }
 
+.hero {
+  height: calc(100vh - var(--nav-height)); /* full height - navbar's height */
+  width: 100vw; /* full width */
+  position: relative;
+}
 
-.hero::after { /* gradient */
-	content: '';
-	height: 100vh;
-	width: 100vw;
-	position: absolute;
-	z-index: 3;
-	background: linear-gradient(180deg, transparent, #000000a0);
+.hero::before {
+  /* gradient */
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 3 !important;
+  background: linear-gradient(180deg, transparent, #000000ae);
 }
 
 .hero > * {
-	position: absolute;
-	bottom: 0;
-	top: 0;
+  position: absolute;
+  bottom: 0;
+  top: 0;
 }
+
+/**** left side ****/
 
 .left-side {
-	left: 0;
-	background: var(--hero-texture);
-	background-size: cover;
-	width: 45vw;
-	z-index: 2;
-	clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 90% 0%);
+  left: 0;
+  width: 45vw;
 }
 
-.right-side {
-	right: 0;
-	background: var(--hero-background);
-	background-size: 100% auto;
-	background-position: center;
-	width: 60vw; /* 100-left and 10vw for overlap */
-	z-index: 1; /* so that left will be on top of right */
+.left-side::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--hero-texture);
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 90% 0%);
+  background-size: cover;
+
+  z-index: 2 !important;
 }
 
-.right-side-content {
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
+.left-side-content {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 0.75fr 1fr;
 }
 
-.title::before {
-	content: '';
-	margin: 10px;
-	border-left: 3px solid;
-	height: auto;
+.left-side-content > * {
+  text-align: justify;
+  color: #fff;
+  z-index: 100 !important;
+  padding-left: 6vw;
 }
 
-.hero > .title {
-	display: flex;
-	color: white;
+.left-side-content > .title::before {
+  content: "";
+  margin-right: 10px;
+  border-left: 5px solid;
 }
 
-.hero > h1 {
-	margin: 10px;
+.left-side-content > .title {
+  text-shadow:
+    0px 0px 1px,
+    0px 0px 1px,
+    0px 0px 1px,
+    0px 0px 1px,
+    0px 0px 1px,
+    0px 0px 1px,
+    0px 0px 1px,
+    0px 0px 1px; /* didnt find a bold font :( */
+  font-weight: 400;
+  font-size: var(--big-title-font-size);
+  display: flex;
+  height: fit-content;
+  margin: auto 0;
 }
-
 
 .hero_buttons {
-	margin: 10px;
-	padding: 5px;
-	border: 0em;
+  margin: auto 0;
+}
+
+.hero_buttons > * {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .services_button {
-	background-color: red;
-	color: white;
+  background-color: #e20202;
+  color: white;
+  box-shadow: 7px 10px 1px #000;
+}
+
+.services_button:hover {
+  background-color: #c31313;
 }
 
 .about_the_center_button {
-	background-color: rgb(112, 88, 88);
-	color: rgb(192, 187, 187);
+  margin: 0 0 0 15%;
+  background-color: #e5e5e5;
+  color: var(--light-gray);
+  box-shadow: 5px 5px 1px #000;
+}
+
+.about_the_center_button:hover {
+  background-color: #c4c4c4;
+}
+
+/**** right side ****/
+
+.right-side {
+  background-size: 100% auto;
+  width: 60vw; /* 100-left and 10vw for overlap */
+  right: 0;
+}
+
+.right-side::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--hero-background);
+  background-position: 50% 70%;
+  background-size: cover;
+  z-index: 1; /* so that left will be on top of right */
+}
+
+.right-side-content {
+  z-index: 100;
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  display: flex;
+}
+
+.right-side-content > * {
+  color: #fff;
+}
+
+.right-side-logo > img {
+  height: calc(var(--right-side-font-size) * 6);
+}
+
+.right-side-logo::after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  background-color: #fff;
+  display: inline-block;
+  margin: 0px 8px;
+}
+
+.right-side-content > .social-media-icons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 3em;
+}
+
+.right-side-content > .social-media-icons > img {
+  width: calc(var(--right-side-font-size) * 1.5);
+}
+
+/**** text ****/
+
+.right-side-content .elmaram {
+  font-size: calc(var(--right-side-font-size) * 1);
+  font-family: var(--ElMaram-font);
+  color: #00206a;
+}
+
+.right-side-content > .text > p {
+  line-height: var(--right-side-font-size);
+  font-family: var(--cursive-ish-font);
 }
