@@ -3,7 +3,7 @@
 :root {
   --right-side-font-size: 1.5em;
 
-  --right-side-line-height: 1.5em;
+  --right-side-line-height: 1.4em;
 }
 
 .hero {
@@ -75,12 +75,13 @@
     0px 0px 1px,
     0px 0px 1px,
     0px 0px 1px,
-    0px 0px 1px; /* didnt find a bold font :( */
+    0px 0px 1px; /* faking a bold font :( */
   font-weight: 400;
   font-size: var(--big-title-font-size);
   display: flex;
   height: fit-content;
   margin: auto 0;
+  margin-left: var(--banner-width);
 }
 
 .hero_buttons {
@@ -140,6 +141,7 @@
   right: 1em;
   bottom: 1em;
   display: flex;
+  height: 10vh;
 }
 
 .right-side-content > * {
@@ -147,7 +149,12 @@
 }
 
 .right-side-logo > img {
-  height: calc(var(--right-side-font-size) * 6);
+  height: calc(var(--right-side-font-size) * 3);
+}
+
+.right-side-logo {
+  display: flex;
+  align-items: center;
 }
 
 .right-side-logo::after {
@@ -168,18 +175,18 @@
 }
 
 .right-side-content > .social-media-icons > img {
-  width: calc(var(--right-side-font-size) * 1.5);
+  width: calc(var(--right-side-font-size) * 1.2);
 }
 
 /**** text ****/
 
 .right-side-content .elmaram {
-  font-size: calc(var(--right-side-font-size) * 1);
+  font-size: var(--right-side-font-size);
   font-family: var(--ElMaram-font);
   color: #00206a;
 }
 
 .right-side-content > .text > p {
-  line-height: var(--right-side-font-size);
+  line-height: var(--right-side-line-height);
   font-family: var(--cursive-ish-font);
 }

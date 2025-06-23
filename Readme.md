@@ -9,8 +9,7 @@ Go to your terminal and type :
 ```bash
 git clone https://github.com/Hacker035Tz/ElMaram-Website <your directory>
 ```
-You might enter your username and your PAT token, to do that see this video :
-https://www.youtube.com/watch?v=iLrywUfs7yU
+You might enter your username and your PAT token, to do that see this [video](https://www.youtube.com/watch?v=iLrywUfs7yU)
 At time 1:03
 
 and when you complete your changes

@@ -12,6 +12,19 @@
 
 /**** logo ****/
 
+.banner {
+  height: 30vh;
+  width: var(--banner-width);
+  background-color: var(--banner-color);
+  position: absolute;
+  left: calc(var(--banner-width) * (-2));
+  clip-path: polygon(0% 0%, 0% 100%, 50% 90%, 100% 100%, 100% 0%);
+}
+
+.nav > .logo {
+  position: relative;
+}
+
 .nav > .logo > img {
   width: var(--nav-height);
 }

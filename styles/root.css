@@ -10,27 +10,33 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
   font-family: var(--text-font);
+}
+
+body {
+  /* disable vertical scrolling */
+  overflow-x: hidden;
 }
 
 :root {
   /* colors */
   --nav-bar-c: #fff; /* c stands for color */
   --bg-c: #e0e0e0;
+  --banner-color: #00245c;
 
   --light-gray: #51595a;
 
   /* dimensions */
   --nav-height: min(100px, 15vh);
+  --banner-width: 60px;
 
   /* font sizes :
 		r: regular,
 		b: big,
 	*/
-  --big-title-font-size: 4em;
-  --title-font-size: 3.5em;
-  --text-font-size: 1.5em;
+  --big-title-font-size: 3.5em;
+  --title-font-size: 3em;
+  --text-font-size: 1.2em;
 
   /* special dimentions for the website to be responsive */
   --call-us-width: min(25vw, 180px);
